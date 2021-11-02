@@ -1,6 +1,6 @@
 <template>
   <ul class="list">
-    <li class="item" v-for="letter of letters" :key="letter">{{ letter }}</li>
+    <li class="item" v-for="letter of letters" :key="letter" @click="handleLetterClick">{{ letter }}</li>
   </ul>
 </template>
 <script>
@@ -16,6 +16,11 @@ export default {
         letters.push(i)
       }
       return letters
+    }
+  },
+  methods: {
+    handleLetterClick (e) {
+      this.$emit('change', e.target.innerText)
     }
   }
 }
