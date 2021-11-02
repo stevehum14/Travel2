@@ -19,9 +19,10 @@ export default {
   .search-input
     box-sizing border-box
     width 100%
-    height 0 .1rem
+    height .62rem
     line-height .62rem
     text-align center
     border-radius .06rem
     color #666
+    padding: 0 .2rem
 </style>
