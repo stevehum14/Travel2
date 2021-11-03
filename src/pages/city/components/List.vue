@@ -46,9 +46,7 @@ export default {
       }
     }
   },
-  mounted () {
-    console.log('准备好了')
-    console.log(this.$refs.wrapper)
+  updated () {
     this.scroll = new Bscroll(this.$refs.wrapper)
   }
 }
