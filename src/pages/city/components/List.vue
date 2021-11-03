@@ -38,9 +38,6 @@ export default {
     cities: Object,
     letter: String
   },
-  mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
-  },
   watch: {
     letter () {
       if (this.letter) {
@@ -48,6 +45,11 @@ export default {
         this.scroll.scrollToElement(element)
       }
     }
+  },
+  mounted () {
+    console.log('准备好了')
+    console.log(this.$refs.wrapper)
+    this.scroll = new Bscroll(this.$refs.wrapper)
   }
 }
 </script>
@@ -58,10 +60,10 @@ export default {
   &:after
     border-color #ccc
 .border-bottom
-&:before
-  border-color #ccc
-&:after
-  border-color #ccc
+  &:before
+    border-color #ccc
+  &:after
+    border-color #ccc
 .list
   overflow hidden
   position absolute
@@ -77,8 +79,8 @@ export default {
     color #666
     font-size .26rem
   .button-list
-    padding .1rem .6rem .1rem .1rem
     overflow hidden
+    padding .1rem .6rem .1rem .1rem
     .button-wrapper
       float left
       width 33.3%
