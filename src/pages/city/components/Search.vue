@@ -35,8 +35,8 @@ export default {
   },
   methods: {
     handleCityClick (city) {
-      console.log('ssssss')
       this.$store.commit('changeCity', city)
+      this.$router.push('/')
     }
   },
   watch: {
