@@ -38,10 +38,10 @@ export default {
   },
   // 绑定和解绑全局事件
   activated () {
-    window.addEventListener('scroll',this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll)
   },
   deactivated () {
-    window.removeEventListener('scroll',this.handleScroll)
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
